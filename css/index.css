@@ -2,6 +2,10 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+<<<<<<< HEAD
+=======
+
+>>>>>>> a15990e63f357e784079bae8d84ab84065138382
 html,
 body,
 div,
@@ -83,6 +87,7 @@ time,
 mark,
 audio,
 video {
+<<<<<<< HEAD
   margin: 0;
   padding: 0;
   border: 0;
@@ -91,6 +96,19 @@ video {
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
+=======
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+>>>>>>> a15990e63f357e784079bae8d84ab84065138382
 article,
 aside,
 details,
@@ -102,6 +120,7 @@ hgroup,
 menu,
 nav,
 section {
+<<<<<<< HEAD
   display: block;
 }
 body {
@@ -115,10 +134,30 @@ blockquote,
 q {
   quotes: none;
 }
+=======
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+>>>>>>> a15990e63f357e784079bae8d84ab84065138382
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
+<<<<<<< HEAD
   content: '';
   content: none;
 }
@@ -246,3 +285,31 @@ footer {
   color: white;
   padding: 3%;
 }
+=======
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* Set every element's box-sizing to border-box */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    font-size: 62.5%;
+    border: 1px solid red;
+    margin: 2%;
+}
+
+@bgcolor: #dddddd;
+@fsize: 1.6rem;
+>>>>>>> a15990e63f357e784079bae8d84ab84065138382
