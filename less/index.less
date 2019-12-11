@@ -3,7 +3,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -60,7 +59,6 @@ html, body {
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
 
 //variables
-
 @bgcolor: #dddddd;
 @main-font: 'Roboto Mono', monospace;
 @accent: gray;
@@ -75,13 +73,13 @@ html, body {
 	margin-bottom: 2%;
 }
 
-
 body {
 	width: 95%;
 	font-size: 62.5%;
 	margin: 3%;
 	font-family: @main-font;
 }
+
 h1 {
 	font-size: 3rem;
 }
@@ -101,6 +99,21 @@ h3,
 	font-size: 2rem;
 }
 
+nav {
+	font-size: 1.6rem;
+	display: flex;
+	justify-content: space-between;
+	margin-left: 60%;
+	padding: 1% 0;
+
+	@media (max-width: 500px) {
+		margin-left: 0%;
+	}
+	a {
+		text-decoration: none;
+	}
+}
+
 .upper-content {
 	background-color: @bgcolor;
 	.flex-column();
@@ -114,13 +127,15 @@ h3,
 	p {
 		.margins();
 	}
+	a {
+		text-decoration: none;
+	}
 }
 
 .upper-content img {
 	width: 25%;
 	.margins();
 }
-
 
 .button {
 	border: 1px solid @accent;
@@ -131,6 +146,10 @@ h3,
 	padding: .5%;
 	border-radius: 5px;
 	.margins();
+
+	@media (max-width: 500px) {
+		width: 60%;
+	}
 }
 
 .middle {
@@ -138,11 +157,20 @@ h3,
 	flex-wrap: wrap;
 	.margins();
 
+	@media (max-width: 500px) {
+		flex-direction: column;
+		align-items: center;
+		.margins();
+	}
+
 	h2, h3 {
 		.margins();
 	}
 }
 
+ul li {
+	border: 1px solid @bgcolor;
+}
 .lower-left-content {
 	width: 47%;
 	margin-right: 5%;
@@ -163,7 +191,6 @@ table {
 	h3 {
 		.margins();
 	}
-
 }
 
 td, th {
