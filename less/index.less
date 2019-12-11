@@ -3,7 +3,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -57,3 +56,155 @@ html, body {
     height: 100%;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
+//variables
+@bgcolor: #dddddd;
+@main-font: 'Roboto Mono', monospace;
+@accent: gray;
+
+//mixins
+.flex-column() {
+	display: flex;
+	flex-direction: column;
+}
+.margins() {
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+body {
+	width: 95%;
+	font-size: 62.5%;
+	margin: 3%;
+	font-family: @main-font;
+}
+
+h1 {
+	font-size: 3rem;
+}
+
+h2 {
+	font-size: 2.5rem;
+}
+
+p,
+ul,
+table {
+	font-size: 1.6rem;
+}
+
+h3,
+.button {
+	font-size: 2rem;
+}
+
+nav {
+	font-size: 1.6rem;
+	display: flex;
+	justify-content: space-between;
+	margin-left: 60%;
+	padding: 1% 0;
+
+	@media (max-width: 500px) {
+		margin-left: 0%;
+	}
+	a {
+		text-decoration: none;
+	}
+}
+
+.upper-content {
+	background-color: @bgcolor;
+	.flex-column();
+	padding: 2%;
+	h1 {
+		.margins();
+	}
+	h3 {
+		.margins();
+	}
+	p {
+		.margins();
+	}
+	a {
+		text-decoration: none;
+	}
+}
+
+.upper-content img {
+	width: 25%;
+	.margins();
+}
+
+.button {
+	border: 1px solid @accent;
+	background-color: @accent;
+	color: white;
+	width: 20%;
+	text-align: center;
+	padding: .5%;
+	border-radius: 5px;
+	.margins();
+
+	@media (max-width: 500px) {
+		width: 60%;
+	}
+}
+
+.middle {
+	display:flex;
+	flex-wrap: wrap;
+	.margins();
+
+	@media (max-width: 500px) {
+		flex-direction: column;
+		align-items: center;
+		.margins();
+	}
+
+	h2, h3 {
+		.margins();
+	}
+}
+
+ul li {
+	border: 1px solid @bgcolor;
+}
+.lower-left-content {
+	width: 47%;
+	margin-right: 5%;
+	.flex-column();
+}
+.lower-right-content {
+	width: 48%;
+	.flex-column();
+}
+
+table {
+	width: 100%;
+	.margins();
+}
+
+.bottom {
+	.flex-column();
+	h3 {
+		.margins();
+	}
+}
+
+td, th {
+	border-top: 1 px solid @bgcolor;
+	text-align: left;
+	padding: 1%;
+}
+tr:nth-child(even) {
+	background-color: @bgcolor;
+}
+
+footer {
+	background-color: @accent;
+	text-align: center;
+	color: white;
+	padding: 3%;
+}
