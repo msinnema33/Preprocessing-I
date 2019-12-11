@@ -145,5 +145,11 @@ table {
 
 html,
 body {
-    height: 100%;
+    width: 100%;
+    font-size: 62.5%;
+    border: 1px solid red;
+    margin: 2%;
 }
+
+@bgcolor: #dddddd;
+@fsize: 1.6rem;
